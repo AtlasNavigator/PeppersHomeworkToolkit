@@ -13,6 +13,7 @@
 </head>
 <body>
     <h1>Welcome to the Specific Heat Section, choose<br> your type of calculation you would like to perform:</h1>
+    <p><a href="index.html"><-- Go Home</a></p>
     <p><br>Remember, if you are doing this by hand, the formula for specific<br>heat is:</p>
     <img src="specificHeatFormula.svg" alt="specific heat formula">
     <p>Q = heat energy (in Joules)</p>
@@ -53,15 +54,16 @@
         const clearButton = document.getElementById('clear');
 
         calculateButton.addEventListener('click', function (e) {
-            let sideA = +a.value;
-            let sideB = +b.value;
-            let sideC = +c.value;
+            let numA = +a.value;
+            let numB = +b.value;
+            let numC = +c.value;
+            let response = numA * numB * numC;
             ans.classList.remove("hidden");
-            if (checkIsValid(sideA) || !checkIsValid(sideB) || !checkIsValid(sideC)) {
+            if (!checkIsValid(numA) || !checkIsValid(numB) || !checkIsValid(numC)) {
                 ans.textContent = 'Invalid Inputs';
                 return;
             }
-            ans.textContent = 'Your inputs do NOT make a triangle'
+            ans.textContent = `The total heat energy is ${response} Joules.`
         })
 
         clearButton.addEventListener('click', function (e) {
