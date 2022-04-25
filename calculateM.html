@@ -9,7 +9,7 @@
             display: none;
         }
     </style>
-    <title>Find "C" - The Peppers Homework Toolkit</title>
+    <title>Find "M" - The Peppers Homework Toolkit</title>
 </head>
 <body>
 <h1>Welcome to the Specific Heat Section, choose<br> your type of calculation you would like to perform:</h1>
@@ -24,14 +24,14 @@
 
 <div class="container">
     <div class="content">
-        <h3>Find C (g/°C):</h3>
+        <h3>Find M (mass):</h3>
         <div class="row">
             <div>
                 <label for="a">Enter Q (joules):</label>
                 <input type="text" id="a" name="a" style="width: 100px">
             </div>
             <div>
-                <label for="b">Enter M (mass): </label>
+                <label for="b">C (g/°C): </label>
                 <input type="text" id="b" name="b" style="width: 100px">
             </div>
             <div>
@@ -64,7 +64,7 @@
             ans.textContent = 'Invalid Inputs';
             return;
         }
-        ans.textContent = `Your specific heat is ${response} (g/°C).`
+        ans.textContent = `The mass is ${response}.`
     })
 
     clearButton.addEventListener('click', function (e) {
